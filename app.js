@@ -1,17 +1,10 @@
 const express = require('express');
 const routes = require('./routes/index');
-const CSVToJSON = require('csvtojson');
-// const stateData = require('./formatData')
+const states = require('./routes/state.js');
 
 const app = express();
 app.use('/', routes);
+app.use('/states', states);
 
-// CSVToJSON().fromFile('state_data.csv')
-//     .then(stataData => {
-//         console.log(stateData);
-//     }).catch(err => {
-//         // log error if any
-//         console.log(err);
-//     });
 
 module.exports = app;

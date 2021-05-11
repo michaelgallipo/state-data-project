@@ -9,8 +9,6 @@ var parsedData = stateData.allStateData ?
 router.get('/', (req, res) => {
   // res.send('It Works!');
   res.send(parsedData._rejectionHandler0);
-  // console.log(parsedData._rejectionHandler0.length);
-  // res.send(parsedData);
 });
 
 module.exports = router;
